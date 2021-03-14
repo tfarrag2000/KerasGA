@@ -17,7 +17,7 @@ def model_weights_as_matrix(model, weights_vector):
     weights_matrix = []
 
     start = 0
-    for layer_idx, layer in enumerate(model.layers): # model.get_weights():
+    for layer_idx, layer in list(enumerate(model.layers)): # model.get_weights():
     # for w_matrix in model.get_weights():
         layer_weights = layer.get_weights()
         if layer.trainable:
